@@ -9,7 +9,9 @@ gem 'rails', '~> 5.2.6'
 gem 'pg'
 gem 'dotenv-rails'
 gem 'puma', '~> 3.11'
-
+gem 'carrierwave', '~> 2.1'
+gem "mini_magick"
+gem "fog-aws"
 #gem 'active_admin_flat_skin'
 gem 'arctic_admin'
 
@@ -33,7 +35,7 @@ gem 'activeadmin'
 gem 'toastr-rails'
 gem 'bcrypt',  :require => "bcrypt"
 # Reduces boot times through caching; required in config/boot.rb
-# gem 'bootsnap', require: false
+# gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
