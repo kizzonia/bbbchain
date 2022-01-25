@@ -22,11 +22,9 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
-  <<: *default
-  database: bchain_development
-  pool: 5
-  username: postgres
-  password: kizzonia1
+    adapter: postgresql
+    database: dayton
+    host: localhost
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -58,12 +56,12 @@ development:
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
-test:
-  <<: *default
-  database: bchain_test
-  pool: 5
-  username: postgres
-  password: kizzonia1
+# test:
+#   <<: *default
+#   database: proxadacore_test
+#   pool: 5
+#   username: postgres
+#   # password: kizzonia1
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -84,6 +82,7 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+
 production:
   <<: *default
   url: <%= ENV['DATABASE_URL'] %>
