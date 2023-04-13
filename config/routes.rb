@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :headers
   resources :accounts
   resources :welcomes
-  
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
